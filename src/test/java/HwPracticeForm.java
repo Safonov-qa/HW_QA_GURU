@@ -21,7 +21,7 @@ public class HwPracticeForm {
     }
 
         @Test
-        void PracticeFormTest() {
+        void practiceFormTest() {
         open("/automation-practice-form");
         Selenide.executeJavaScript("$('#fixedban').remove()");
         Selenide.executeJavaScript("$('footer').remove()");
