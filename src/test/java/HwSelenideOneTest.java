@@ -24,8 +24,19 @@ public class HwSelenideOneTest {
         $(".Box-row.wiki-more-pages-link").$("button").click();
         $(".Layout-sidebar").shouldHave(text("SoftAssertions"));
         $(".Box.Box--condensed.color-shadow-small").$(byText("SoftAssertions")).click();
-        $("#js-repo-pjax-container").shouldHave(text("Using JUnit5 extend test class"));
-
+        $(".markdown-body")
+                .shouldHave(text("""
+                        @ExtendWith({SoftAssertsExtension.class})
+                        class Tests {
+                          @Test
+                          void test() {
+                            Configuration.assertionMode = SOFT;
+                            open("page.html");
+                                                
+                            $("#first").should(visible).click();
+                            $("#second").should(visible).click();
+                          }
+                        }"""));
 
         }
 
