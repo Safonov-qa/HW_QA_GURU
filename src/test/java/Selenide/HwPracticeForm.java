@@ -1,3 +1,5 @@
+package Selenide;
+
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.BeforeAll;
@@ -48,6 +50,7 @@ public class HwPracticeForm {
         $(".modal-body").shouldHave(text("Vasya Pupkin"), text("VasyaPupkin@mail.ru"),
                 text("Female"), text("8800555353"), text("15 May,2028"), text("English"),
                 text("Sports"), text("--44.jpeg"), text("Russia"), text("Uttar Pradesh Lucknow"));
+        sleep(6000);
 
         }
 
