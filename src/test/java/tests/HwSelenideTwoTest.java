@@ -1,3 +1,5 @@
+package tests;
+
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -21,7 +23,7 @@ public class HwSelenideTwoTest {
         open("https://github.com/");
 
         $(".header-menu-wrapper").find(byText("Solutions")).hover();
-        $(byTagAndText("a","Enterprise")).click();
+        $(byTagAndText("a", "Enterprise")).click();
         $(".application-main").shouldHave(text("Build like the best"));
 
 
