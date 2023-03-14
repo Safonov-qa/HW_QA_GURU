@@ -27,6 +27,7 @@ public class HwPageObjectTest extends TestBase {
 
 
         registrationPage.openPage()
+                .removeBanner()
                 .setFirstName(userName)
                 .setLastName(lastName)
                 .setUserEmail(userEmail)
@@ -42,8 +43,7 @@ public class HwPageObjectTest extends TestBase {
 
                 .clickSubmit();
 
-        registrationPage.verifyResultModal()
-                .verifyResult("Student Name", userName + lastName)
+        registrationPage.verifyResult("Student Name", userName + lastName)
                 .verifyResult("Student Email", userEmail)
                 .verifyResult("Gender", gender)
                 .verifyResult("Mobile", userNumber)

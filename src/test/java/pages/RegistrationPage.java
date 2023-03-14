@@ -31,11 +31,17 @@ public class RegistrationPage {
     public RegistrationPage openPage() {
 
         open("/automation-practice-form");
+
+        return this;
+    }
+
+    public RegistrationPage removeBanner() {
         Selenide.executeJavaScript("$('#fixedban').remove()");
         Selenide.executeJavaScript("$('footer').remove()");
 
         return this;
     }
+
 
     public RegistrationPage setFirstName(String value) {
         firstNameInput.setValue(value);
@@ -70,12 +76,6 @@ public class RegistrationPage {
     public RegistrationPage setBirthday(String day, String month, String year) {
         dateOfBirthdayInput.click();
         calendarComponent.setDate(day, month, year);
-
-        return this;
-    }
-
-    public RegistrationPage verifyResultModal() {
-        registrationResultModal.verifyModal();
 
         return this;
     }
