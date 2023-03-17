@@ -58,12 +58,12 @@ public class RegistrationPage {
     public RegistrationPage setUserEmail(String value) {
         userEmailInput.setValue(value);
 
-
         return this;
     }
 
     public RegistrationPage setGender(String value) {
         genderInput.$(byText(value)).click();
+
         return this;
     }
 
