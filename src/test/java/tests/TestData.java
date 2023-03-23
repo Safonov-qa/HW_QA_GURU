@@ -1,6 +1,7 @@
 package tests;
 
 import com.github.javafaker.Faker;
+import java.util.Map;
 
 
 public class TestData {
@@ -14,12 +15,16 @@ public class TestData {
 
     public static String[] userhobbies = {"Reading", "Sports", "Music"};
 
-    public static String[] usercity = {"Delhi", "Gurgaon", "Noida"};
 
     public static String[] usermonth = {"January", "February", "March", "April", "May", "June",
             "July", "August", "September", "October", "November", "December"};
 
-
+    static Map<String, String[]> mapStateWithCity = Map.of(
+            "NCR", new String[]{"Delhi", "Gurgaon", "Noida"},
+            "Uttar Pradesh", new String[]{"Agra", "Lucknow", "Merrut"},
+            "Haryana", new String[]{"Karnal", "Panipat"},
+            "Rajasthan", new String[]{"Jaipur", "Jaiselmer"}
+    );
 
 
     public static String
@@ -35,8 +40,8 @@ public class TestData {
             hobbies = faker.options().option(userhobbies),
             picture = "--44.jpeg",
             currentAddress = faker.address().fullAddress(),
-            state = "NCR",
-            city = faker.options().option(usercity);
+            state = faker.options().option(mapStateWithCity.keySet().toArray()).toString(),
+            city = faker.options().option(mapStateWithCity.get(state));
 
 }
 
