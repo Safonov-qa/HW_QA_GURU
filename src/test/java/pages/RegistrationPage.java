@@ -3,7 +3,6 @@ package pages;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import pages.components.CalendarComponent;
-import pages.components.RegistrationResultModal;
 import java.io.File;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
@@ -11,8 +10,13 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class RegistrationPage {
 
-    private final CalendarComponent calendarComponent = new CalendarComponent();
-    private final RegistrationResultModal registrationResultModal = new RegistrationResultModal();
+    CalendarComponent calendarComponent = new CalendarComponent();
+
+    private final String
+            REMOVE_BANNER_INPUT = "$('#fixedban').remove()",
+            REMOVE_FOOTER_INPUT = "$('footer').remove()",
+            ADDRESS_REGISTRATION_FORM = "/automation-practice-form";
+
     private  final SelenideElement
             firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
@@ -24,20 +28,22 @@ public class RegistrationPage {
             hobbiesInput = $("#hobbiesWrapper"),
             uploadPictureInput = $("#uploadPicture"),
             currentAddressInput = $("#currentAddress"),
-            stateInput = $("#stateCity-wrapper"),
-            cityInput = $("#stateCity-wrapper");
+            stateInput = $("#state"),
+            cityInput = $("#city"),
+            submitButton = $("#submit");
 
+    File file = new File("src/test/resources/--44.jpeg");
 
     public RegistrationPage openPage() {
 
-        open("/automation-practice-form");
+        open(ADDRESS_REGISTRATION_FORM);
 
         return this;
     }
 
     public RegistrationPage removeBanner() {
-        Selenide.executeJavaScript("$('#fixedban').remove()");
-        Selenide.executeJavaScript("$('footer').remove()");
+        Selenide.executeJavaScript(REMOVE_BANNER_INPUT);
+        Selenide.executeJavaScript(REMOVE_FOOTER_INPUT);
 
         return this;
     }
@@ -80,13 +86,6 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage verifyResult(String key, String value) {
-        registrationResultModal.verifyResult(key, value);
-
-        return this;
-
-    }
-
     public RegistrationPage setSubject(String value) {
         subjectInput.setValue(value).pressEnter();
 
@@ -102,7 +101,7 @@ public class RegistrationPage {
     }
 
     public RegistrationPage setPicture() {
-        uploadPictureInput.uploadFile(new File("src/test/resources/--44.jpeg"));
+        uploadPictureInput.uploadFile(file);
 
         return this;
 
@@ -116,7 +115,7 @@ public class RegistrationPage {
     }
 
     public RegistrationPage setState(String value) {
-        $("#state").click();
+        stateInput.click();
         stateInput.$(byText(value)).click();
 
         return this;
@@ -124,7 +123,7 @@ public class RegistrationPage {
     }
 
     public RegistrationPage setCity(String value) {
-        $("#city").click();
+        cityInput.click();
         cityInput.$(byText(value)).click();
 
 
@@ -133,7 +132,7 @@ public class RegistrationPage {
     }
 
     public void clickSubmit() {
-        $("#submit").click();
+        submitButton.click();
 
 
     }
