@@ -1,11 +1,15 @@
 package tests;
 
 import org.junit.jupiter.api.Test;
+import pages.RegistrationPage;
+import pages.components.RegistrationResultModal;
+
 import static com.codeborne.selenide.Selenide.*;
 
 public class HwPageObjectTest extends TestBase {
 
-    //https://demoqa.com/automation-practice-form
+RegistrationPage registrationPage = new RegistrationPage();
+RegistrationResultModal registrationResultModal = new RegistrationResultModal();
 
     @Test
     void practiceFormTest() {
@@ -36,14 +40,14 @@ public class HwPageObjectTest extends TestBase {
                 .setBirthday(day, month,year)
                 .setSubject(subject)
                 .setHobbies(hobbies)
-                .setPicture()
+                .setPicture(picture)
                 .setCurrentAddress(currentAddress)
                 .setState(state)
                 .setCity(city)
 
                 .clickSubmit();
 
-        registrationPage.verifyResult("Student Name", userName + lastName)
+        registrationResultModal.verifyResult("Student Name", userName + lastName)
                 .verifyResult("Student Email", userEmail)
                 .verifyResult("Gender", gender)
                 .verifyResult("Mobile", userNumber)
@@ -58,5 +62,4 @@ public class HwPageObjectTest extends TestBase {
     }
 
 }
-
 

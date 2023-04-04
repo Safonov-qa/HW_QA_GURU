@@ -13,18 +13,4 @@ public class RandomUtils {
         int index = getRandomInt(0, values.length - 1);
         return values[index];
     }
-
-//    public static String getRandomString(int lenght) {
-//        String AB = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-//
-//        SecureRandom rnd = new SecureRandom();
-//        StringBuilder sb = new StringBuilder(lenght);
-//        for (int i = 0; i < lenght; i++)
-//            sb.append(AB.charAt(rnd.nextInt(AB.length())));
-//        return sb.toString();
-//    }
-//    public static String getRandomEmail() {
-//        return getRandomString(10) + "@qa.guru";
-//    }
-
 }

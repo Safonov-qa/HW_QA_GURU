@@ -3,7 +3,6 @@ package pages;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import pages.components.CalendarComponent;
-import java.io.File;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -11,6 +10,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class RegistrationPage {
 
     CalendarComponent calendarComponent = new CalendarComponent();
+
 
     private final String
             REMOVE_BANNER_INPUT = "$('#fixedban').remove()",
@@ -32,7 +32,6 @@ public class RegistrationPage {
             cityInput = $("#city"),
             submitButton = $("#submit");
 
-    File file = new File("src/test/resources/--44.jpeg");
 
     public RegistrationPage openPage() {
 
@@ -100,8 +99,8 @@ public class RegistrationPage {
 
     }
 
-    public RegistrationPage setPicture() {
-        uploadPictureInput.uploadFile(file);
+    public RegistrationPage setPicture(String value) {
+        uploadPictureInput.uploadFromClasspath(value);
 
         return this;
 

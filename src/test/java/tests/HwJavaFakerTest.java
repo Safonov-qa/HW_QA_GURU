@@ -30,7 +30,7 @@ public class HwJavaFakerTest extends TestBase {
                     .setBirthday(studentData.getDay(), studentData.getMonth(), studentData.getYear())
                     .setSubject(studentData.getSubject())
                     .setHobbies(studentData.getHobby())
-                    .setPicture()
+                    .setPicture(studentData.getFilePath())
                     .setCurrentAddress(studentData.getAddress())
                     .setState(studentData.getState())
                     .setCity(studentData.getCity())

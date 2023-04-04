@@ -1,6 +1,10 @@
 package utils;
 
 import com.github.javafaker.Faker;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 import java.util.Map;
 
 
@@ -13,10 +17,15 @@ public class TestData {
     public static String[] usersubject = {"English", "Maths", "Arts", "Computer Science",
             "Economics", "Social Students", "History", "Civics", "Commerce", "Hindi", "Biology", "Accounting"};
 
-    public static String[] userhobbies = {"Reading", "Sports", "Music"};
+    public static Date fakerDateOfBirthday = faker.date().birthday();
 
-    public static String[] usermonth = {"January", "February", "March", "April", "May", "June",
-            "July", "August", "September", "October", "November", "December"};
+    public static String birthDay = (new SimpleDateFormat("d", Locale.ENGLISH)).format(fakerDateOfBirthday);
+
+    public static String birthMonth = (new SimpleDateFormat("MMMM", Locale.ENGLISH)).format(fakerDateOfBirthday);
+
+    public static String birthYear = (new SimpleDateFormat("y", Locale.ENGLISH)).format(fakerDateOfBirthday);
+
+    public static String[] userhobbies = {"Reading", "Sports", "Music"};
 
     public static Map<String, String[]> mapStateWithCity = Map.of(
             "NCR", new String[]{"Delhi", "Gurgaon", "Noida"},
@@ -31,9 +40,9 @@ public class TestData {
                 userEmail = faker.internet().emailAddress(),
                 userNumber = "8" + faker.phoneNumber().subscriberNumber(9),
                 gender = faker.options().option(usergender),
-                day = String.valueOf(faker.number().numberBetween(1, 28)),
-                month = faker.options().option(usermonth),
-                year = String.valueOf(faker.number().numberBetween(1900, 2100)),
+                day = faker.options().option(birthDay),
+                month = faker.options().option(birthMonth),
+                year = faker.options().option(birthYear),
                 subject = faker.options().option(usersubject),
                 hobbies = faker.options().option(userhobbies),
                 picture = "--44.jpeg",
