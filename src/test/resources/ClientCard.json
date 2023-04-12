@@ -1,0 +1,9 @@
+{
+  "nameClient": "Ilya",
+  "loginClient": "12345",
+  "cards": {
+  "name":
+ [ "Visa","MasterCard"]
+
+  }
+}

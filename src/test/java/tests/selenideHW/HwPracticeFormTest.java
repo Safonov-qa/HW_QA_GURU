@@ -1,4 +1,4 @@
-package tests.hwselenide;
+package tests.selenideHW;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;

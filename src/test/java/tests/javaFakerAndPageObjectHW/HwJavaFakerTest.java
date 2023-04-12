@@ -1,4 +1,4 @@
-package tests;
+package tests.javaFakerAndPageObjectHW;
 
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
