@@ -1,4 +1,4 @@
-package tests.WorkingWithFileHW;
+package tests.workingwithfilehw;
 
 import java.util.Map;
 
