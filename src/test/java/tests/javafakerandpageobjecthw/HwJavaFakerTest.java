@@ -11,6 +11,8 @@ import utils.TestData;
 import static com.codeborne.selenide.Selenide.sleep;
 
 
+@Tag("HomeWork")
+
 
 public class HwJavaFakerTest extends TestBase {
 
@@ -18,7 +20,6 @@ public class HwJavaFakerTest extends TestBase {
     RegistrationResultModal registrationResultModal= new RegistrationResultModal();
 
         @Test
-        @Tag("HomeWork")
         void practiceFormTest() {
             StudentData studentData = TestData.generateStudent();
             registrationPage
