@@ -1,5 +1,6 @@
 package tests.javafakerandpageobjecthw;
 
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 import pages.components.RegistrationResultModal;
@@ -17,6 +18,7 @@ public class HwJavaFakerTest extends TestBase {
     RegistrationResultModal registrationResultModal= new RegistrationResultModal();
 
         @Test
+        @Tag("HomeWork")
         void practiceFormTest() {
             StudentData studentData = TestData.generateStudent();
             registrationPage
