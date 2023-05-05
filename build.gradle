@@ -38,9 +38,9 @@ dependencies {
 }
 
 
-test {
-    useJUnitPlatform()
-}
+//test {
+//    useJUnitPlatform()
+//}
 task HomeWork_test(type: Test) {
     useJUnitPlatform {
         includeTags("HomeWork")
