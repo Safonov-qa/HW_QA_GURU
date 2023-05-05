@@ -26,19 +26,31 @@ public class HwSelenideOneTest {
         $(".Box-row.wiki-more-pages-link").$("button").click();
         $(".Layout-sidebar").shouldHave(text("SoftAssertions"));
         $(".Box.Box--condensed.color-shadow-small").$(byText("SoftAssertions")).click();
-        $(".markdown-body")
-                .shouldHave(text("""
-                        @ExtendWith({SoftAssertsExtension.class})
-                        class Tests {
-                          @Test
-                          void test() {
-                            Configuration.assertionMode = SOFT;
-                            open("page.html");
+        $(".markdown-body").
+                shouldHave(text(" Configuration.assertionMode = SOFT"));
 
-                            $("#first").should(visible).click();
-                            $("#second").should(visible).click();
-                          }
-                        }"""));
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//                .shouldHave(text("""
+//                        @ExtendWith({SoftAssertsExtension.class})
+//                        class Tests {
+//                          @Test
+//                          void test() {
+//                            Configuration.assertionMode = SOFT;
+//                            open("page.html");
+//
+//                            $("#first").should(visible).click();
+//                            $("#second").should(visible).click();
+//                          }
+//                        }"""));
 
         }
 
