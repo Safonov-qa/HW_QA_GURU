@@ -1,12 +1,14 @@
 package utils;
 
 import com.github.javafaker.Faker;
+import org.junit.jupiter.api.Tag;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Map;
 
+@Tag("HomeWork")
 
 public class TestData {
 

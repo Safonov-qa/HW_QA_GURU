@@ -1,6 +1,10 @@
 package utils;
 
+import org.junit.jupiter.api.Tag;
+
 import java.util.concurrent.ThreadLocalRandom;
+
+@Tag("HomeWork")
 
 public class RandomUtils {
 

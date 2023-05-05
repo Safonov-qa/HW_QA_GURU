@@ -1,5 +1,9 @@
 package utils;
 
+import org.junit.jupiter.api.Tag;
+
+@Tag("HomeWork")
+
 public class StudentData {
 
         private String firstName;
