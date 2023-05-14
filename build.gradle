@@ -8,7 +8,7 @@ allure {
         version.set "2.21.0"
     }
     adapter {                                 // отвечает за появление папочки build/allure-results
-        aspectjWeaver.set true                //обработка аннотации @Step
+        aspectjWeaver.set (true)              //обработка аннотации @Step
         frameworks {
             junit5 {                          //название фреймворка
                 adapterVersion.set("2.21.0")  //версия интеграции фреймворка и Allure
@@ -26,13 +26,15 @@ dependencies {
     testImplementation (
             'org.junit.jupiter:junit-jupiter:5.9.2',
             'com.codeborne:selenide:6.12.3',
+            'io.qameta.allure:allure-selenide:2.22.0',
             'org.slf4j:slf4j-simple:2.0.6',
             "com.github.javafaker:javafaker:1.0.2",
-            'com.codeborne:pdf-test:1.5.0',
-            'com.codeborne:xls-test:1.4.3',
+            'com.codeborne:pdf-test:1.8.1',
+            'com.codeborne:xls-test:1.7.0',
             'com.opencsv:opencsv:5.7.1',
             'com.google.code.gson:gson:2.10.1',
-            'com.fasterxml.jackson.core:jackson-databind:2.14.2'
+            'com.fasterxml.jackson.core:jackson-databind:2.14.2',
+            'org.apache.poi:poi:3.7'
     )
 
 }
