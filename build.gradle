@@ -57,3 +57,8 @@ task HomeWork_test(type: Test) {
         includeTags("HomeWork")
     }
 }
+task HW_TG_bot_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("Tg_Bot")
+    }
+}
