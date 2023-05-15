@@ -13,6 +13,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.util.Map;
 
 @Tag("HomeWork")
+@Tag("Tg_Bot")
 
 public class TestBase {
 
