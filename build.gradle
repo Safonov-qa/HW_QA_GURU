@@ -48,3 +48,8 @@ task HomeWork_test(type: Test) {
         includeTags("HomeWork")
     }
 }
+task Hw_TGbot_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("TelegramBot")
+    }
+}
