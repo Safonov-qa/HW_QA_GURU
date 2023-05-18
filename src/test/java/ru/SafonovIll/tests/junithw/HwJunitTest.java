@@ -1,4 +1,4 @@
-package tests.junithw;
+package ru.SafonovIll.tests.junithw;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

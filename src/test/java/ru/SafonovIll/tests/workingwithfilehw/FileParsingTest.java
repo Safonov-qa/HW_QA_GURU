@@ -1,4 +1,4 @@
-package tests.workingwithfilehw;
+package ru.SafonovIll.tests.workingwithfilehw;
 
 import com.codeborne.pdftest.PDF;
 import com.codeborne.xlstest.XLS;

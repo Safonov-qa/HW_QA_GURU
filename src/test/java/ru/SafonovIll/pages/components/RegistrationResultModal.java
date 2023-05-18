@@ -1,4 +1,4 @@
-package pages.components;
+package ru.SafonovIll.pages.components;
 
 import org.junit.jupiter.api.Tag;
 

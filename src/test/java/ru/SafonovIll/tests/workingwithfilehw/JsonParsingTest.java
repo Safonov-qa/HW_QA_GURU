@@ -1,4 +1,4 @@
-package tests.workingwithfilehw;
+package ru.SafonovIll.tests.workingwithfilehw;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;

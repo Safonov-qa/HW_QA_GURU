@@ -1,4 +1,4 @@
-package tests.selenidehw;
+package ru.SafonovIll.tests.selenidehw;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
@@ -30,7 +30,7 @@ public class HwSelenideOneTest {
         $("[placeholder='Search GitHub']").setValue("selenide").pressEnter();
         $$("ul.repo-list li").first().$("a").click();
         $("#wiki-tab").click();
-        $(".Box-row.wiki-more-pages-link").$("button").click();
+        $(".Box-row.wiki-more-ru.SafonovIll.ru.SafonovIll.pages.pages-link").$("button").click();
         $(".Layout-sidebar").shouldHave(text("SoftAssertions"));
         $(".Box.Box--condensed.color-shadow-small").$(byText("SoftAssertions")).click();
         $(".markdown-body").

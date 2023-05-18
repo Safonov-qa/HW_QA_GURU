@@ -1,9 +1,9 @@
-package pages;
+package ru.SafonovIll.pages;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.Tag;
-import pages.components.CalendarComponent;
+import ru.SafonovIll.pages.components.CalendarComponent;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;

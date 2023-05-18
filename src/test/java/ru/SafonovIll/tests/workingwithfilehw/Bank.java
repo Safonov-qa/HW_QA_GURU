@@ -1,4 +1,4 @@
-package tests.workingwithfilehw;
+package ru.SafonovIll.tests.workingwithfilehw;
 
 import java.util.Map;
 

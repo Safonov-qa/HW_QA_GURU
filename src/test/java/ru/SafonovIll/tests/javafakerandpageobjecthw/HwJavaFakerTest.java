@@ -1,12 +1,11 @@
-package tests.javafakerandpageobjecthw;
+package ru.SafonovIll.tests.javafakerandpageobjecthw;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import pages.RegistrationPage;
-import pages.components.RegistrationResultModal;
-import utils.StudentData;
-import utils.TestData;
-
+import ru.SafonovIll.pages.RegistrationPage;
+import ru.SafonovIll.pages.components.RegistrationResultModal;
+import ru.SafonovIll.utils.StudentData;
+import ru.SafonovIll.utils.TestData;
 
 import static com.codeborne.selenide.Selenide.sleep;
 import static io.qameta.allure.Allure.step;

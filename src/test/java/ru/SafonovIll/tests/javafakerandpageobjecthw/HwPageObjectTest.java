@@ -1,9 +1,9 @@
-package tests.javafakerandpageobjecthw;
+package ru.SafonovIll.tests.javafakerandpageobjecthw;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import pages.RegistrationPage;
-import pages.components.RegistrationResultModal;
+import ru.SafonovIll.pages.RegistrationPage;
+import ru.SafonovIll.pages.components.RegistrationResultModal;
 import static com.codeborne.selenide.Selenide.*;
 
 @Tag("HomeWork")

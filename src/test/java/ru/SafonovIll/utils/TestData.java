@@ -1,4 +1,4 @@
-package utils;
+package ru.SafonovIll.utils;
 
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Tag;
