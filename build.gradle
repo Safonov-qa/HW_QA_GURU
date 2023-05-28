@@ -40,16 +40,25 @@ dependencies {
 }
 
 
-test {
+tasks.withType(Test) {
     useJUnitPlatform()
+    systemProperties(System.getProperties())
+
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
 }
+
 task HomeWork_test(type: Test) {
     useJUnitPlatform {
         includeTags("HomeWork")
     }
 }
-task Hw_TGbot_test(type: Test) {
+task HW_TG_bot_test(type: Test) {
     useJUnitPlatform {
-        includeTags("TelegramBot")
+        includeTags("Tg_Bot")
     }
 }

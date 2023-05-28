@@ -1,4 +1,4 @@
-package ru.SafonovIll.tests.selenidehw;
+package tests.selenidehw;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
@@ -12,7 +12,8 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-@Tag("TelegramBot")
+@Tag("Tg_Bot")
+
 
 public class HwPracticeFormTest {
 
@@ -22,8 +23,6 @@ public class HwPracticeFormTest {
     static void beforeAll() {
        Configuration.browserSize = "1920x1080";
        Configuration.baseUrl = "https://demoqa.com";
-       Configuration.pageLoadStrategy = "eager";
-       Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
     }
 

@@ -1,4 +1,4 @@
-package ru.SafonovIll.tests.selenidehw;
+package tests.selenidehw;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
@@ -8,8 +8,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-@Tag("TelegramBot")
-
+@Tag("Tg_Bot")
 
 public class HwSelenideOneTest {
 
@@ -17,9 +16,6 @@ public class HwSelenideOneTest {
     static void beforeAll() {
 
         Configuration.browserSize = "1920x1080";
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-
-
     }
 
 
@@ -30,7 +26,7 @@ public class HwSelenideOneTest {
         $("[placeholder='Search GitHub']").setValue("selenide").pressEnter();
         $$("ul.repo-list li").first().$("a").click();
         $("#wiki-tab").click();
-        $(".Box-row.wiki-more-ru.SafonovIll.ru.SafonovIll.pages.pages-link").$("button").click();
+        $(".Box-row.wiki-more-pages-link").$("button").click();
         $(".Layout-sidebar").shouldHave(text("SoftAssertions"));
         $(".Box.Box--condensed.color-shadow-small").$(byText("SoftAssertions")).click();
         $(".markdown-body").

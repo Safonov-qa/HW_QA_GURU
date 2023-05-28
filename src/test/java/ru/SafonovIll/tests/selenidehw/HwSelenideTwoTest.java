@@ -1,4 +1,4 @@
-package ru.SafonovIll.tests.selenidehw;
+package tests.selenidehw;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
@@ -10,8 +10,7 @@ import static com.codeborne.selenide.Selectors.byTagAndText;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-@Tag("TelegramBot")
-
+@Tag("Tg_Bot")
 
 public class HwSelenideTwoTest {
 
@@ -19,7 +18,6 @@ public class HwSelenideTwoTest {
     static void beforeAll() {
 
         Configuration.browserSize = "1920x1080";
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
     }
 
     @Test
